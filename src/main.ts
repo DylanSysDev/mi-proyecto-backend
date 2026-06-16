@@ -13,10 +13,21 @@ async function bootstrap() {
     }),
   );*/
  //app.enableCors();//“acepta peticiones desde otros dominios”
- app.enableCors({
-  origin: 'http://localhost:5173',
-});
-  await app.listen(3000);
+  // version para correr localmente
+  // app.enableCors({
+  //   origin: 'http://localhost:5173',
+  // });
+
+ /* app.enableCors({
+    origin: true,
+    credentials: true,
+  });
+  //await app.listen(3000);
+  await app.listen(process.env.PORT || 3000);*/
+  app.enableCors();
+  const port = process.env.PORT || 3000; 
+  await app.listen(port);
+  console.log(`Application is running on: http://localhost:${port}`);
 }
 
 bootstrap();
