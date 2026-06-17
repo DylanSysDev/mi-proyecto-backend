@@ -8,13 +8,4 @@ export class LoginDto {
   @IsString()
   @IsNotEmpty()
   contrasenia!: string;
-}/*
-¿Qué es DTO?
-
-DTO significa:
-
-Data Transfer Object
-
-En NestJS:
-sirve para definir los datos que llegan al backend.
-*/ 
+}

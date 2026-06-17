@@ -18,6 +18,7 @@ export class AuthService {
       
     private historialService:  HistoryService,
   ) {}
+//registrar usuario
   async register(body: any) {
 
     const existeUsuario =
@@ -56,13 +57,11 @@ export class AuthService {
       nuevoUsuario,
     );
   }
+  
+//LOGIN
     
   async login(loginDto: LoginDto,req:Request) {
-//creacion
 
-
-
-//
     const usuario = await this.usuarioRepository.findOne({
       where: {
         carnet_de_identidad:

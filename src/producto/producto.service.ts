@@ -26,20 +26,13 @@ export class ProductoService {
   }
 
   create(data: Partial<Producto>) {
-    const producto =
-      this.productoRepository.create(data);
+    const producto =   this.productoRepository.create(data);
 
     return this.productoRepository.save(producto);
   }
 
-  async update(
-    id: number,
-    data: Partial<Producto>,
-  ) {
-    await this.productoRepository.update(
-      id,
-      data,
-    );
+  async update(  id: number,  data: Partial<Producto>, ) {
+    await this.productoRepository.update(   id,     data,    );
 
     return this.findOne(id);
   }
