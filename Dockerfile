@@ -33,4 +33,5 @@ COPY --from=builder /app/dist ./dist
 EXPOSE 3000
 
 # Comando para arrancar la aplicación en producción
-CMD ["node", "dist/main.js"]
+# CMD ["node", "dist/main.js"]
+CMD ["node", "dist/src/main.js"]
